@@ -1,26 +1,23 @@
- # -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 # from time import sleep
 import unittest
- from time import sleep
-from zhanghu.login_page import LoginPage
+from time import sleep
+
+from Public import myunit
 from shouye.home_page import Home_page
- from Public import myunit
- import unittest
- from time import sleep
+from zhanghu.login_page import LoginPage
+from zhanghu.account.zhuce import Zhucepage
 
- from Public import myunit
- from shouye.home_page import Home_page
- from zhanghu.login_page import LoginPage
-
-
- class RegisterTest(myunit.MyTest):
-	def test_Register(self):
-		u'''登录'''
-		pohome = Home_page(self.driver)
+class RegisterTest(myunit.MyTest):
+	def test_register(self):
+		u'''注册'''
+		pohome = Home_page()
 		sleep(7)
 		pohome.home_account()
-		poaccount = LoginPage(self.driver)
+		poaccount = LoginPage()
 		poaccount.go_register_Action()
+		pozhuce = Zhucepage()
+		pozhuce.zhuce_Action(13011111101, 111111, 111111)
 
 
 

@@ -11,7 +11,6 @@ from time import sleep
 class Jiaoyimingxi(LoginPage):
 	# 交易明细
 	jiaoyimingxi_text = (By.XPATH, "//android.widget.TextView[@text='交易明细']")
-
 	# 筛选
 	choukuanzhong_text = (By.XPATH, "//android.widget.ImageView[@index='0']")
 	# 一个月

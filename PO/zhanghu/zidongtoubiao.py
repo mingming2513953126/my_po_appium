@@ -8,26 +8,21 @@ from appium import webdriver
 from time import sleep
 
 
-class Chanpin(LoginPage):
-	# 产品
-	chanpinsanbiao_text = (By.XPATH, "//android.widget.TextView[@text='产品']")
-	# 债权
-	chanpinzhaiquan_text = (By.XPATH, "//android.widget.TextView[@text='债权']")
-	# 产品详情-马上投资
-	mashangtouzi_text = (By.XPATH, "//android.widget.TextView[@text='马上投资']")
-	# 购买金额
-	goumaijine_text = (By.XPATH, "//android.widget.EditText[@text='100元起投，且以一百元整数倍递增']")
-	# 余额全投
-	guizeshuoming_text = (By.XPATH, "//android.widget.TextView[@text='余额全投']")
-	# 使用优惠券
-	shiyongyouhuiquan_text = (By.XPATH, "//android.widget.TextView[@text='使用优惠券']")
-	# 卡券第一个
-	kaquandiyige_text = (By.XPATH, "//android.widget.CheckBox[@index='2']")
-
-
-
-
-	
+class Zidongtoubiao(LoginPage):
+	# 自动投标设置
+	zidongtoubiaoshezhi_text = (By.XPATH, "//android.widget.TextView[@text='设置']")
+	# 最低利率
+	zuidililv_text = (By.ID, "com.pangpangzhu.p2papp.test:id/tvMixInterest")
+	# 回款周期
+	huikuanzhouqi_text = (By.ID, "com.pangpangzhu.p2papp.test:id/tvBackCycle")
+	# 当前排名
+	dangqianpaiming_text = (By.ID, "com.pangpangzhu.p2papp.test:id/tvRankNow")
+	# 规则说明
+	guizeshuoming_text = (By.XPATH, "//android.widget.TextView[@text='规则说明']")
+	# 自动投标开关
+	zidongtoubiaokaiguan_text = (By.XPATH, "//android.widget.CompoundButton[@index='2']")
+	# 预期年化利率
+	yuqinianhualilv_text = (By.XPATH, "//android.widget.TextView[@text='预期年化利率']")
 	# 出借期限
 	chujieqixian_text = (By.XPATH, "//android.widget.TextView[@text='出借期限']")
 	# 还款方式

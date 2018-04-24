@@ -7,6 +7,10 @@ from tool.driver import Appium
 from appium import webdriver
 from time import sleep
 class Shezhi(LoginPage):
+	# 账户
+	zhanghu_text = (By.XPATH, "//android.widget.TextView[@text='账户']")
+	# 设置
+	shezhi_text = (By.ID, "com.pangpangzhu.p2papp.test:id/ivSetting")
 	# 手势密码
 	shoushimima_text = (By.XPATH, "//android.widget.CompoundButton[@index='2']")
 	# 手机认证
@@ -19,8 +23,10 @@ class Shezhi(LoginPage):
 	bangdingyinhangka_text = (By.XPATH, "//android.widget.TextView[@text='已绑卡']")
 	# 登录密码设置
 	denglumimashezhi_text = (By.XPATH, "//android.widget.TextView[@text='登录密码设置']")
-	# 交易密码
-	jiaoyimima_text = (By.XPATH, "//android.widget.TextView[@text='重置交易密码']")
+	# 设置交易密码
+	shezhijiaoyimima_text = (By.XPATH, "//android.widget.TextView[@text='设置交易密码']")
+	# 重置交易密码
+	chongzhijiaoyimima_text = (By.XPATH, "//android.widget.TextView[@text='重置交易密码']")
 	# 更改第三方手机号
 	genggaisanfangshoujihao_text = (By.XPATH, "//android.widget.TextView[@text='更改第三方手机号']")
 	# 在线反馈
@@ -31,3 +37,16 @@ class Shezhi(LoginPage):
 	dangqianbanben_text = (By.XPATH, "//android.widget.TextView[@text='当前版本']")
 	# 退出登录
 	tuichudenglu_text = (By.XPATH, "//android.widget.TextView[@text='退出登录']")
+
+	# 账户
+	def zhanghu(self):
+		self.driver.find_element(*self.zhanghu_text).click()
+	# 重置交易密码
+	def shezhi(self):
+		self.driver.find_element(*self.shezhi_text).click()
+	# 设置交易密码
+	def shezhijiaoyimima(self):
+		self.driver.find_element(*self.shezhijiaoyimima_text).click()
+	# 重置交易密码
+	def chongzhijiaoyimima(self):
+		self.driver.find_element(*self.shezhijiaoyimima_text).click()
