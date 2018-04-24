@@ -8,11 +8,16 @@ from appium import webdriver
 from time import sleep
 
 
-class Chanpin(LoginPage):
+class ChanpinPage(LoginPage):
+	a = "批A普A027"
 	# 产品
 	chanpinsanbiao_text = (By.XPATH, "//android.widget.TextView[@text='产品']")
 	# 债权
 	chanpinzhaiquan_text = (By.XPATH, "//android.widget.TextView[@text='债权']")
+	# 指定产品
+	# zhidingchanpin_text = (By.XPATH, "//android.widget.TextView[@text= %s] %(a)")
+	zhidingchanpin_text = (By.XPATH, "// android.widget.TextView[ @ text = '批A普A027']")
+	# zhidingchanpin_text = (By.LINK_TEXT, "批A普A027")
 	# 产品详情-马上投资
 	mashangtouzi_text = (By.XPATH, "//android.widget.TextView[@text='马上投资']")
 	# 购买金额
@@ -24,31 +29,21 @@ class Chanpin(LoginPage):
 	# 卡券第一个
 	kaquandiyige_text = (By.XPATH, "//android.widget.CheckBox[@index='2']")
 
+	# 产品
+	def chanpinsanbiao(self):
+		self.driver.find_element(*self.chanpinsanbiao_text).click()
+
+	# 指定标的
+	def zhidingchanpin(self):
+		self.driver.find_element(*self.zhidingchanpin_text).click()
+
+	def chanpin_Action(self):
+		self.chanpinsanbiao()
+		self.zhidingchanpin()
 
 
 
-	
-	# 出借期限
-	chujieqixian_text = (By.XPATH, "//android.widget.TextView[@text='出借期限']")
-	# 还款方式
-	huankuanfangshi_text = (By.XPATH, "//android.widget.TextView[@text='还款方式']")
-	# 出借金额低
-	chujiejinedi_text = (By.ID, "com.pangpangzhu.p2papp.test:id/tvSumFloor")
-	# 出借金额高
-	chujiejinegao_text = (By.ID, "com.pangpangzhu.p2papp.test:id/tvSumCeil")
-	# 使用优惠券
-	shiyongyouhuiquan_text = (By.ID, "com.pangpangzhu.p2papp.test:id/sbSwitch")
-	# 我已阅读并同意三个协议
-	zidongtoubiaosangexieyi_text = (By.XPATH, "//android.widget.CheckBox[@text='我已阅读并同意']")
-	# 风险提示确认函
-	fengxiantishiquerenhan_text = (By.XPATH, "//android.widget.TextView[@text='《风险提示确认函》']")
-	# 风险提示书
-	fengxiantishishu_text = (By.XPATH, "//android.widget.TextView[@text='《风险提示书》']")
-	# 借贷项目说明书
-	jiedaixiangmushuomingshu_text = (By.XPATH, "//android.widget.TextView[@text='《借贷项目说明书》']")
-	# 保存设置
-	baocunzidongtoubiaoshezhi_text = (By.XPATH, "//android.widget.Button[@text='保存设置']")
-	# 暂不修改
-	zanbuxiugaizidongtoubiaoshezhi_text = (By.XPATH, "//android.widget.Button[@text='暂不修改']")
-	# 返回
-	fanhuizidongtoubiaoshezhi_text = (By.XPATH, "//android.widget.ImageView[@index='0']")
+
+
+
+

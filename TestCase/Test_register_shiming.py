@@ -20,6 +20,7 @@ class RegisterTest(myunit.MyTest):
 		pozhuce = Zhucepage()
 		pozhuce.zhuce_Action(13011111101, 111111, 111111)
 		poshiming = Shiming()
+		# poshiming.shiming_Action('姓名', '身份证', '银行卡', '手机')
 		poshiming.shiming_Action('', '', '', '')
 		poshezhijiaoyimima = Shezhijiaoyimima()
 		poshezhijiaoyimima.shezhijiaoyimima_Action()

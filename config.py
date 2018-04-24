@@ -62,28 +62,29 @@ desired_caps_zww = {
 """
 
 # 华为手机
-"""
+
 desired_caps_zww = {
-    'deviceName': '94ea31d1',
-    'platformVersion': '7.0',
+    'deviceName': 'N2F3B61571177075',
+    'platformVersion': '6.0',
     'platformName': 'Android',
-    'appPackage': 'com.pangpangzhu.p2papp.app.fulu',
-    'appActivity': 'com.zkbc.p2papp.ui.activity.StartActivity',
+    'app': 'F:\\work\\update\\apk\\cs\\xbcshj\\a40274172b23f49064e57a9599a8666c.apk',
+    'appPackage': 'com.pangpangzhu.p2papp.test',
+    'appActivity': 'com.pangpangzhu.p2papp.pangpangpig.welcom.WelcomActivity',
     # 'appWaitActivity': 'com.netease.ldzww.login.activity.LoginEntryActivity',
     # 'unicodeKeyboard': True,
     # 'resetKeyboard': True,
     "noReset": True,
 }
-"""
 
-desired_caps_zww = {'platformName': 'Android',
-                    'platformVersion': '7.0',
-                    'deviceName': '94ea31d1',
-                    'app': 'F:\\work\\update\\apk\\cs\\xbcshj\\a40274172b23f49064e57a9599a8666c.apk',
-                    'clearSystemFiles': True,
-                    'appActivity': 'com.pangpangzhu.p2papp.pangpangpig.welcom.WelcomActivity',
-                    'appPackage':'com.pangpangzhu.p2papp.test',
-                    # 'automationName': 'UIAutomator2',
-                    'noSign': True,
-                    'noReset': True
-                    }
+
+# desired_caps_zww = {'platformName': 'Android',
+#                     'platformVersion': '7.0',
+#                     'deviceName': '94ea31d1',
+#                     'app': 'F:\\work\\update\\apk\\cs\\xbcshj\\a40274172b23f49064e57a9599a8666c.apk',
+#                     'clearSystemFiles': True,
+#                     'appActivity': 'com.pangpangzhu.p2papp.pangpangpig.welcom.WelcomActivity',
+#                     'appPackage': 'com.pangpangzhu.p2papp.test',
+#                     # 'automationName': 'UIAutomator2',
+#                     'noSign': True,
+#                     'noReset': True
+#                     }

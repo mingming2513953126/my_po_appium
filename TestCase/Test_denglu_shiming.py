@@ -18,11 +18,13 @@ class LoginTest(myunit.MyTest):
 		sleep(7)
 		pohome.myaccount()
 		popage = LoginPage()
-		popage.login('13011111101', '111111')
+		# popage.usr_pwd_button('13511324283', '111111')
+		popage.login('13511324283', '111111')
 		poshiming = Shiming()
-		poshiming.shiming_Action('', '', '', '')
-		poshezhijiaoyimima = Shezhijiaoyimima()
-		poshezhijiaoyimima.shezhijiaoyimima_Action()
+		# poshiming.shiming_Action('姓名', '身份证', '银行卡', '手机')
+		poshiming.shiming_Action('李测试账户八', '310101198812177516', '3005457710442524', '15120080522')
+		# poshezhijiaoyimima = Shezhijiaoyimima()
+		# poshezhijiaoyimima.shezhijiaoyimima_Action()
 
 
 

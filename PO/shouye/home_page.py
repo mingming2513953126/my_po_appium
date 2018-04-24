@@ -86,3 +86,6 @@ class Home_page(Appium):
         # sleep(1)
         self.login_Button()
 
+    def meiriqiandao_Action(self):
+        self.click_by_xpath("//android.widget.TextView[@text='首页']")
+        self.click_by_xpath("//android.widget.TextView[@text='每日签到']")

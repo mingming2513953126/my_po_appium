@@ -40,7 +40,7 @@ class Appium():
 
     @try_to
     # def input_by_xpath(self, ele_xpath, content, timeout=10):
-    def input_by_xpath(self, ele_xpath, content, timeout=1):
+    def input_by_xpath(self, ele_xpath, content, timeout=10):
         # WebDriverWait(self.driver).until(lambda driver: driver.find_element_by_xpath(ele_xpath))
         WebDriverWait(self.driver, timeout).until(lambda driver: driver.find_element_by_xpath(ele_xpath))
         el = self.driver.find_element_by_xpath(ele_xpath)

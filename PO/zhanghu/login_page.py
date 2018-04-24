@@ -14,7 +14,7 @@ class LoginPage(Appium):
     # 手机号
     cellphone_number_text = (By.XPATH, "//android.widget.EditText[@text='手机号']")
     # 密码
-    login_password_text = (By.XPATH, "//android.widget.EditText[@text='登录密码']")
+    login_password_text = (By.ID, "com.pangpangzhu.p2papp.test:id/etLoginPass")
     # 登录
     login_button_text = (By.XPATH, "//android.widget.TextView[@text='登录']")
     # 注册
@@ -39,9 +39,9 @@ class LoginPage(Appium):
 
 
     # 用户名-密码-登录
-    def usr_pwd_button(self, username, password):
-        self.cellphone_number(username)
-        self.login_password(password)
+    def usr_pwd_button(self, usr, pwd):
+        self.cellphone_number(usr)
+        self.login_password(pwd)
         self.login_button()
         # sleep(1)
 
@@ -58,12 +58,9 @@ class LoginPage(Appium):
     def login(self, usr, pwd):
         # xpath
         self.input_by_xpath("//android.widget.EditText[@text='手机号']", usr)
-        self.input_by_xpath("//android.widget.EditText[@text='登录密码']", pwd)
+        self.input_by_id("com.pangpangzhu.p2papp.test:id/etLoginPass", pwd)
         self.click_by_xpath("//android.widget.TextView[@text='登录']")
         # id
         # self.input_by_id("com.pangpangzhu.p2papp.fulu: id / etLoginName", usr)
         # self.input_by_id("com.pangpangzhu.p2papp.fulu: id / etLoginPass", pwd)
         # self.click_by_id("com.pangpangzhu.p2papp.fulu: id / tvDoLogin")
-
-
-
