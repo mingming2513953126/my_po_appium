@@ -6,6 +6,7 @@ from time import sleep
 import xlrd
 from Public import myunit
 from shouye.home_page import Home_page
+from zhanghu.account.tuichu import TuichuPage
 from zhanghu.login_page import LoginPage
 def open_excel(file= 'file.xlsx'):
 	try:
@@ -54,6 +55,8 @@ class LoginTest(myunit.MyTest):
 			# popage.usr_pwd_button('13011111111', '111111')
 			# popage.login2_Action('13011111101', '111111')
 			popage.login(listdata[i]['username'], listdata[i]['password'])
+			pologinout = TuichuPage()
+			pologinout.tuichudenglu_Action()
 			sleep(10)
 
 
