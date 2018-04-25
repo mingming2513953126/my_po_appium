@@ -9,7 +9,7 @@ from zhanghu.login_page import LoginPage
 from zhanghu.account.zhuce import Zhucepage
 from zhanghu.account.shezhijiaoyimima import Shezhijiaoyimima
 
-class RegisterTest(myunit.MyTest):
+class Register_shimingTest(myunit.MyTest):
 	def test_register_shiming_shezhijiaoyimima(self):
 		u'''注册，实名，设置交易密码'''
 		pohome = Home_page()

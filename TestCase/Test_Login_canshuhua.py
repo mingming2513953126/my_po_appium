@@ -30,9 +30,9 @@ def excel_table_byindex(file= 'file.xlsx',colnameindex=0,by_index=0):
 		return list
 
 
-class LoginTest(myunit.MyTest):
+class Login_canshuhuaTest(myunit.MyTest):
 
-	def test_Login(self):
+	def test_Login_canshuhua(self):
 		u'''登录'''
 		listdata = excel_table_byindex("E:\\python\\appium\\my_po_appium_xinban\\test_case\\ceshicase.xlsx", 0)
 		if (len(listdata) <= 0):

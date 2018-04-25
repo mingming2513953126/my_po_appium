@@ -11,7 +11,7 @@ from zhanghu.login_page import LoginPage
 from zhanghu.account.shezhijiaoyimima import Shezhijiaoyimima
 
 
-class LoginTest(myunit.MyTest):
+class Login_shimingTest(myunit.MyTest):
 	def test_Login_shiming_shezhijiaoyimima(self):
 		u'''登录,实名，设置交易密码'''
 		pohome = Home_page()

@@ -10,8 +10,8 @@ from zhanghu.chongzhi import ChongzhiPage
 from zhanghu.login_page import LoginPage
 
 
-class LoginTest(myunit.MyTest):
-	def test_Login(self):
+class ChongzhiTest(myunit.MyTest):
+	def test_chongzhi(self):
 		u'''充值'''
 		pohome = Home_page()
 		sleep(7)
