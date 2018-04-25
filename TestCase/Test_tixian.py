@@ -13,7 +13,7 @@ from zhanghu.tixian import TixianPage
 
 class TixianTest(myunit.MyTest):
 	def test_Tixian(self):
-		u'''充值'''
+		u'''提现'''
 		pohome = Home_page()
 		sleep(7)
 		pohome.myaccount()

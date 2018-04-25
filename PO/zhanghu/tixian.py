@@ -47,9 +47,11 @@ class TixianPage(Shezhi):
 	# 提现
 	def tixian_Action(self, tixianjine, jiaoyimima):
 		self.tixian()
+		sleep(1)
 		self.shurutixianjine(tixianjine)
-		self.shurujiaoyimima(jiaoyimima)
+		self.quedingtixian()
 		sleep(5)
 		self.swipe_up(1000)
+		self.shurujiaoyimima(jiaoyimima)
 		sleep(3)
 		self.quedingtixian()
