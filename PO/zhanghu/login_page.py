@@ -59,7 +59,8 @@ class LoginPage(Appium):
         # xpath
         self.input_by_xpath("//android.widget.EditText[@text='手机号']", usr)
         self.input_by_id("com.pangpangzhu.p2papp.test:id/etLoginPass", pwd)
-        self.click_by_xpath("//android.widget.TextView[@text='登录']")
+        # self.click_by_xpath("//android.widget.TextView[@text='登录']")
+        self.click_by_id("com.pangpangzhu.p2papp.test:id/tvDoLogin")
         # id
         # self.input_by_id("com.pangpangzhu.p2papp.fulu: id / etLoginName", usr)
         # self.input_by_id("com.pangpangzhu.p2papp.fulu: id / etLoginPass", pwd)
