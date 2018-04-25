@@ -9,7 +9,7 @@ from time import sleep
 from zhanghu.shezhi import Shezhi
 
 
-class Tixian(Shezhi):
+class TixianPage(Shezhi):
 	# 提现
 	tixian_text = (By.XPATH, "//android.widget.TextView[@text='提现']")
 	# 到账银行
