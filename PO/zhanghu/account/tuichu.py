@@ -28,7 +28,6 @@ class TuichuPage(Shezhi):
 		self.zhanghu()
 		self.shezhi()
 		self.swipe_up(1000)
-		# self.swipeDown(100)
 		self.tuichudenglu()
 		self.tuichudenglu_queding()
 

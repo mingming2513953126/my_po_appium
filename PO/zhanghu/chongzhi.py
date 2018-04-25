@@ -6,7 +6,9 @@ from zhanghu.login_page import LoginPage
 from tool.driver import Appium
 from appium import webdriver
 from time import sleep
-class Chongzhi(LoginPage):
+from zhanghu.shezhi import Shezhi
+
+class ChongzhiPage(Shezhi):
 	# 充值
 	chongzhi_text = (By.XPATH, "//android.widget.TextView[@text='充值']")
 	# 充值金额
@@ -49,3 +51,40 @@ class Chongzhi(LoginPage):
 	kaihudi_text = (By.ID, "com.pangpangzhu.p2papp.test:id/tvAccountPlace")
 	# 开户分行
 	kaihufenhang_text = (By.ID, "com.pangpangzhu.p2papp.test:id/tvAccountBankBranch")
+
+	# 充值
+	def chongzhi(self):
+		self.driver.find_element(*self.chongzhi_text).click()
+	# 充值金额
+	def chongzhijine(self, text):
+		self.driver.find_element(*self.chongzhijine_text).send_keys(text)
+	# 立即充值
+	def lijichongzhi(self):
+		self.driver.find_element(*self.lijichongzhi_text).click()
+	# 获取验证码点击事件
+	def huoquyanzhengma_button(self):
+		self.driver.find_element(*self.huoquyanzhengma_button_text).click()
+	# 验证码
+	def yanzhengma(self, text):
+		self.driver.find_element(*self.yanzhengma_text).send_keys(text)
+	# 输入交易密码
+	def shurujiaoyimima(self, text):
+		self.driver.find_element(*self.shurujiaoyimima_text).send_keys(text)
+	# 缺人充值
+	def querenchongzhi_button(self):
+		self.driver.find_element(*self.querenchongzhi_button_text).click()
+
+	# 充值
+	def chongzhi_Action(self, chongzhijine, jiaoyimima):
+		self.zhanghu()
+		self.chongzhi()
+		self.chongzhijine(chongzhijine)
+		self.lijichongzhi()
+		sleep(5)
+		self.swipe_up(1000)
+		sleep(3)
+		self.huoquyanzhengma_button()
+		# self.yanzhengma(yanzhengma)
+		sleep(5)
+		self.shurujiaoyimima(jiaoyimima)
+		self.querenchongzhi_button()
