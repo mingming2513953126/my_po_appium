@@ -19,6 +19,7 @@ class TixianTest(myunit.MyTest):
 		pohome.myaccount()
 		popage = LoginPage()
 		popage.login('13011111103', '111111')
+		sleep(1)
 		pochongzhi = TixianPage()
 		# pochongzhi.chongzhi_Action('金额', '111111')
 		pochongzhi.tixian_Action('10', '111111')
