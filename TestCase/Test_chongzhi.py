@@ -6,6 +6,7 @@ from time import sleep
 
 from Public import myunit
 from shouye.home_page import Home_page
+from zhanghu.account.tuichu import TuichuPage
 from zhanghu.chongzhi import ChongzhiPage
 from zhanghu.login_page import LoginPage
 
@@ -21,7 +22,9 @@ class ChongzhiTest(myunit.MyTest):
 		pochongzhi = ChongzhiPage()
 		# pochongzhi.chongzhi_Action('金额', '111111')
 		pochongzhi.chongzhi_Action('10', '111111')
-		sleep(10)
+		pologinout = TuichuPage()
+		pologinout.tuichudenglu_Action()
+		# sleep(10)
 
 
 if __name__ == "__main__":

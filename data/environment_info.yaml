@@ -1,0 +1,13 @@
+!EnvironmentInfo
+apk: E:\python\appium\my_po_appium_xinban/apk/pppig.apk
+app_activity: com.pangpangzhu.p2papp.pangpangpig.welcom.WelcomActivity
+app_package: com.pangpangzhu.p2papp.test
+appium: 1.6.5
+devices:
+- !DeviceInfo
+  device_name: N2F3B61571177075
+  platform_name: Android
+  platform_version: '6.0'
+html_report: E:\python\appium\my_po_appium_xinban/report/html
+pages_yaml: E:\python\appium\my_po_appium_xinban/page/yaml
+xml_report: E:\python\appium\my_po_appium_xinban/report/xml

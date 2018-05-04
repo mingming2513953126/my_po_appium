@@ -7,6 +7,7 @@ from time import sleep
 from Public import myunit
 from shouye.home_page import Home_page
 from zhanghu.account.shiming import Shiming
+from zhanghu.account.tuichu import TuichuPage
 from zhanghu.login_page import LoginPage
 from zhanghu.account.shezhijiaoyimima import Shezhijiaoyimima
 
@@ -25,6 +26,8 @@ class Login_shimingTest(myunit.MyTest):
 		poshiming.shiming_Action('李测试账户八', '310101198812177516', '3005457710442524', '15120080522')
 		# poshezhijiaoyimima = Shezhijiaoyimima()
 		# poshezhijiaoyimima.shezhijiaoyimima_Action()
+		pologinout = TuichuPage()
+		pologinout.tuichudenglu_Action()
 
 
 

@@ -1,5 +1,5 @@
 # coding:utf-8
-from tool.log import logger
+from tool.logs import logger
 import time
 
 
