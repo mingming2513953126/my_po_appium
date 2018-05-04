@@ -54,9 +54,10 @@ class LoginPage(Appium):
         self.forget_password()
 
     # 登录
-    @exe_deco
+    # @exe_deco
     def login(self, usr, pwd):
         # xpath
+        self.click_by_xpath("//android.widget.TextView[@text='账户']")
         self.input_by_xpath("//android.widget.EditText[@text='手机号']", usr)
         self.input_by_id("com.pangpangzhu.p2papp.test:id/etLoginPass", pwd)
         # self.click_by_xpath("//android.widget.TextView[@text='登录']")

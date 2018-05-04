@@ -50,3 +50,6 @@ class Shezhi(LoginPage):
 	# 重置交易密码
 	def chongzhijiaoyimima(self):
 		self.driver.find_element(*self.shezhijiaoyimima_text).click()
+	# 更改第三方手机号
+	def genggaidisanfangshoujihao(self):
+		self.driver.find_element(*self.genggaisanfangshoujihao_text).click()
